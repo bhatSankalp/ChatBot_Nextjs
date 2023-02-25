@@ -9,6 +9,7 @@
     "export": "npm run build && next export"
   },
   "dependencies": {
+    "@kommunicate/kommunicate-chatbot-plugin": "^0.0.5",
     "eslint-config-next": "^13.2.1",
     "next": "^13.2.1",
     "react": "^18.2.0",

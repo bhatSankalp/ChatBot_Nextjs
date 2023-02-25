@@ -9,8 +9,11 @@ import dynamic from 'next/dynamic'
 //   osVersion
 // } from "react-device-detect";
 import styles from '../styles/Home.module.css'
-const ChatBot = dynamic(import('../components/chatbot'), { ssr: false })
+import Kommunicate from '@kommunicate/kommunicate-chatbot-plugin'
+import { PMOChatBot } from '../src/components/PMOChatbot'
 
+// const ChatBot = dynamic(import('../components/chatbot'), { ssr: false })
+// Kommunicate.init('1f5fd8ca24518f4cd1c43d274d6a19686', {'popupWidget':true, 'automaticChatOpenOnNavigation':true})
 class Home extends React.Component {
   state = {
     ip: {}
@@ -40,7 +43,8 @@ class Home extends React.Component {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main className={styles.main}>
-          <ChatBot />
+          {/* <ChatBot /> */}
+          <PMOChatBot />
           <div className={styles.grid}>
             <h1>Hello welcome to ChatApp 8080</h1>
           </div>
